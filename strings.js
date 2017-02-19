@@ -3,8 +3,8 @@
 var input = document.getElementById("inputString");
 
 var button = document.getElementById("captureUserValue");
-button.addEventListener("click", manipulateString);
-button.addEventListener("keypress", manipulateString);
+button.addEventListener("click", manipulateString(input.value));
+button.addEventListener("keypress", manipulateString(input.value));
 
 document.onkeydown = function() {
  if (window.event.keyCode === 13) {
@@ -17,12 +17,12 @@ document.onkeydown = function() {
 
 /////////////// FUNCTIONS FOR OUTPUTS ////////////////////////
 
-function manipulateString(e){
-    console.log(input.value);
-function reversal(e) {
-    var reverseString = e.split("").reverse().join("");
-    reverseString = document.getElementById("rev").innerHTML;
-    return reverseString;
+function manipulateString(e) {
+	    var reverseString = e.split("").reverse().join("");
+	//     reverseString = document.getElementById("rev").innerHTML;
+	//     return reverseString;
+	// reversal();
+	console.log(reverseString);
 };
 
 // function alphabits(alphaString) {
@@ -33,7 +33,7 @@ function reversal(e) {
 
 // }
 
-}
+
 
 /////////////// CALLING THE FUNCTIONS ////////////////////////
 
