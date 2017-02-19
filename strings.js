@@ -18,11 +18,12 @@ document.onkeydown = function() {
 /////////////// FUNCTIONS FOR OUTPUTS ////////////////////////
 
 function manipulateString(e) {
-	    var reverseString = e.split("").reverse().join("");
-	//     reverseString = document.getElementById("rev").innerHTML;
-	//     return reverseString;
-	// reversal();
+
+	var reverseString = e.split("").reverse().join("");
 	console.log(reverseString);
+	document.getElementById("rev").innerHTML += reverseString;
+
+	var alphabits = 
 };
 
 // function alphabits(alphaString) {
