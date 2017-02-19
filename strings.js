@@ -14,8 +14,16 @@ document.onkeydown = function() {
 
 /////////////// VALIDATING FIELD INPUT ////////////////////////
 
+// function noNumber(evt){
+// 	var charCode = (evt.which) ? evt.which : event.keyCode;
+//     if(charCode > 31 && (charCode < 48 || charCode > 57))
 
-/////////////// FUNCTIONS FOR OUTPUTS ////////////////////////
+//     return true;
+// 	return false;
+
+// }
+
+/////////////// FUNCTION FOR OUTPUTS ////////////////////////
 
 function manipulateString(e) {
 
@@ -23,22 +31,10 @@ function manipulateString(e) {
 	console.log(reverseString);
 	document.getElementById("rev").innerHTML += reverseString;
 
-	var alphabits = 
+	var alphabits = e.split("").sort().join("");
+	console.log(alphabits);
+	document.getElementById("alpha").innerHTML += alphabits;
+
+	// var palindrome = 
+
 };
-
-// function alphabits(alphaString) {
-
-// }
-
-// function palindrome(palinString) {
-
-// }
-
-
-
-/////////////// CALLING THE FUNCTIONS ////////////////////////
-
-// reversal(testString);
-// alphabits(testString);
-// palindrome(testString);
-
