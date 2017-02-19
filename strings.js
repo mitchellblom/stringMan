@@ -35,6 +35,11 @@ function manipulateString(e) {
 	console.log(alphabits);
 	document.getElementById("alpha").innerHTML += alphabits;
 
-	// var palindrome = 
+	var palindrome = reverseString.toLowerCase();
+	if (palindrome === e.toLowerCase()) {
+		document.getElementById("palin").innerHTML += "Yep!";
+	} else {
+		document.getElementById("palin").innerHTML += "Nope!";
+	}
 
 };
