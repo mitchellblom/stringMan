@@ -3,8 +3,8 @@
 var input = document.getElementById("inputString");
 
 var button = document.getElementById("captureUserValue");
-button.addEventListener("click", validate(input.value));
-button.addEventListener("keypress", validate(input.value));
+button.addEventListener("click", validate);
+button.addEventListener("keypress", validate);
 
 document.onkeydown = function() {
  if (window.event.keyCode === 13) {
