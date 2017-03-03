@@ -1,10 +1,11 @@
 # NSS String Manipulation Exercise
 
-![Splashpage]()
+![Splashpage](https://raw.githubusercontent.com/mitchellblom/stringMan/stringMan/stringMan.png)
 
 <hr>
 
 ## Project Summary
+String Manipulator is primarily focused on the application of multiple **Javascript methods** at once with **dot notation**.
 
 <hr>
 
@@ -22,7 +23,7 @@
 
 ## Demonstrated
  - **Field validation**
- - Applying multiple methods within functions on a single line using dot notation
- - Methods including *toLowerCase*, *split*, *reverse*, *join*, *innerHTML*
+ - Applying multiple methods within functions on a single line using **dot notation**
+ - Methods including **toLowerCase**, **split**, **reverse**, **join**, **innerHTML**
  - Event listeners **If/Else loops**
  - Modifying multiple function outputs at once
