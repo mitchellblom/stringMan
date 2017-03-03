@@ -3,7 +3,7 @@
 var input = document.getElementById("inputString");
 
 var button = document.getElementById("captureUserValue");
-button.addEventListener("click", validate);
+button.addEventListener("click", getInputStringValue);
 button.addEventListener("keypress", validate);
 
 document.onkeydown = function() {
@@ -12,44 +12,47 @@ document.onkeydown = function() {
  }
 };
 
+function getInputStringValue(){
+	validate(input.value);
+};
+
 /////////////// VALIDATING FIELD INPUT ////////////////////////
 
-function validate(e) {
-    // if (input == "") {
-    //     alert("Enter something, silly!");
-    //     input.focus();
-    // }
-    // if (!/^[a-z]*$/g.test(input)) {
-    //     alert("Only accepts lowercase letters");
-    //     input.focus();
-    // }
-    // else {
-    	manipulateString(e);
-    // }
+function validate(text) {
+	console.log(text);
+    if (text == "") {
+        alert("Enter something, silly!");
+        input.focus();
+    }
+    if (!/^[a-zA-Z]*$/g.test(text)) {
+        alert("Only accepts letters");
+        input.focus();
+    }
+    else {
+    	manipulateString(text);
+    }
 };
 
 /////////////// REVERSING INPUT ////////////////////////
 
-function reversal(e) {
-	var reverseString = e.split("").reverse().join("");
-	console.log(reverseString);
+function reversal(text) {
+	var reverseString = text.toLowerCase().split("").reverse().join("");
 	document.getElementById("rev").innerHTML += reverseString;
 };
 
 /////////////// ALPHABETIZING INPUT ////////////////////////
 
-function alphabits(e) {
-	var alphabits = e.split("").sort().join("");
-	console.log(alphabits);
+function alphabits(text) {
+	var alphabits = text.toLowerCase().split("").sort().join("");
 	document.getElementById("alpha").innerHTML += alphabits;
 };
 
 /////////////// PALINDROME TEST ////////////////////////
 
-function palindrome(e) {
-	var reverseString = e.split("").reverse().join("");
+function palindrome(text) {
+	var reverseString = text.split("").reverse().join("");
 	var palindrome = reverseString.toLowerCase();
-	if (palindrome === e.toLowerCase()) {
+	if (palindrome === text.toLowerCase()) {
 		document.getElementById("palin").innerHTML = "Yay! This string is a Palindrome.";
 	} else {
 		document.getElementById("palin").innerHTML = "Sorry, this string is not a Palindrome.";
@@ -58,8 +61,8 @@ function palindrome(e) {
 
 /////////////// EXECUTING THE FUNCTIONS ////////////////////////
 
-function manipulateString(e) {
-	reversal(e);
-	alphabits(e);
-	palindrome(e);
+function manipulateString(text) {
+	reversal(text);
+	alphabits(text);
+	palindrome(text);
 };
