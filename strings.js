@@ -24,7 +24,7 @@ function validate(text) {
         alert("Enter something, silly!");
         input.focus();
     }
-    if (!/^[a-zA-Z]*$/g.test(text)) {
+    if (!/^[a-zA-Z\s+]*$/g.test(text)) {
         alert("Only accepts letters");
         input.focus();
     }
@@ -43,16 +43,16 @@ function reversal(text) {
 /////////////// ALPHABETIZING INPUT ////////////////////////
 
 function alphabits(text) {
-	var alphabits = text.toLowerCase().split("").sort().join("");
+	var alphabits = text.replace(/\s+/g, '').toLowerCase().split("").sort().join("");
 	document.getElementById("alpha").innerHTML += alphabits;
 };
 
 /////////////// PALINDROME TEST ////////////////////////
 
 function palindrome(text) {
-	var reverseString = text.split("").reverse().join("");
-	var palindrome = reverseString.toLowerCase();
-	if (palindrome === text.toLowerCase()) {
+	var reverseAndSquish = text.replace(/\s+/g, '').toLowerCase().split("").reverse().join("");
+	var palindrome = reverseAndSquish.toLowerCase();
+	if (palindrome === text.replace(/\s+/g, '').toLowerCase()) {
 		document.getElementById("palin").innerHTML = "Yay! This string is a Palindrome.";
 	} else {
 		document.getElementById("palin").innerHTML = "Sorry, this string is not a Palindrome.";

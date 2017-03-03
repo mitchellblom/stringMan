@@ -1,5 +1,7 @@
 # NSS String Manipulation Exercise
 
+![Splashpage]()
+
 <hr>
 
 ## Project Summary
@@ -19,3 +21,8 @@
 <hr>
 
 ## Demonstrated
+ - **Field validation**
+ - Applying multiple methods within functions on a single line using dot notation
+ - Methods including *toLowerCase*, *split*, *reverse*, *join*, *innerHTML*
+ - Event listeners **If/Else loops**
+ - Modifying multiple function outputs at once
