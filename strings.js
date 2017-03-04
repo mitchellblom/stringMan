@@ -36,15 +36,17 @@ function validate(text) {
 /////////////// REVERSING INPUT ////////////////////////
 
 function reversal(text) {
+	document.getElementById("rev").innerHTML = "Reversed: ";
 	var reverseString = text.toLowerCase().split("").reverse().join("");
-	document.getElementById("rev").innerHTML += reverseString;
+	document.getElementById("rev").innerHTML = `Reversed: ${reverseString}`;
 };
 
 /////////////// ALPHABETIZING INPUT ////////////////////////
 
 function alphabits(text) {
+	document.getElementById("alpha").innerHTML = "Alphabetized: ";
 	var alphabits = text.replace(/\s+/g, '').toLowerCase().split("").sort().join("");
-	document.getElementById("alpha").innerHTML += alphabits;
+	document.getElementById("alpha").innerHTML = `Alphabetized: ${alphabits}`;
 };
 
 /////////////// PALINDROME TEST ////////////////////////
