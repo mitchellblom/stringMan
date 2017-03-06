@@ -67,4 +67,5 @@ function manipulateString(text) {
 	reversal(text);
 	alphabits(text);
 	palindrome(text);
+	input.value = "";
 };
